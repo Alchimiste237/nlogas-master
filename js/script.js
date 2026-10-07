@@ -589,9 +589,8 @@
       formspree: '',
       sheetWebhook: '',
       calendly: '',
-      /* Set these to your own project values only in deployment; keep them empty in source. */
-      supabaseUrl: '',
-      supabaseKey: ''
+      supabaseUrl: 'https://trxevtqlvxdttdbolftk.supabase.co',
+      supabaseKey: 'sb_publishable_ABfQA2dLJMRHk5Vky5BgMw_-wFRlk6s'
     };
     window.NLOGA_CONTACT = CONTACT;
     window.NLOGA_CONFIG = CONTACT; /* Alias used by the registration feature. */

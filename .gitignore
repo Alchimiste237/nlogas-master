@@ -14,11 +14,20 @@ ecosystem_modification.txt
 # --- Duplicate image previews (~800 KB, copies of NLOGA_VISUAL_IDENTITY) ---
 _preview/
 
-# --- Unused root assets (equivalents live in NLOGA_VISUAL_IDENTITY/) ---
+# --- Unused root assets (equivalents live in NLOGA_VISUAL_IDENTITY/ or not referenced by the site) ---
 nloga-favicon.jpg
 nloga-logo.jpg
 nloga-wordmark.jpg
 screen.png
+new_logo.png
+nloga_logo_without_bg.jpg
+logo.zip
+
+# --- Non-runtime project notes / drafts ---
+DESIGN.md
+NLOGA — WEBSITE ORIGINAL CONTENT.md
+nloga_information.md
+preapre.txt
 
 # --- Unreferenced duplicate inside the assets folder ---
 NLOGA_VISUAL_IDENTITY/5854977062785978608_121.jpg
