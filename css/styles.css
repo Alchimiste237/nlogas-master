@@ -151,7 +151,7 @@ body {
   font-size: 15px;
   line-height: 24px;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 img, svg { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
@@ -538,7 +538,10 @@ picture { display: contents; }
 
 /* ---------- 15. Why Nloga & problems ---------- */
 .why-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-lg); align-items: start; }
-@media (min-width: 1024px) { .why-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); } }
+@media (min-width: 1024px) {
+  .why-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+  .why-left { position: sticky; top: calc(var(--header-h) + var(--space-md)); }
+}
 .why-left { display: flex; flex-direction: column; gap: var(--space-md); }
 .mini-card {
   background: var(--surface-container-low); border: 1px solid rgba(255, 255, 255, 0.05);
@@ -602,7 +605,7 @@ picture { display: contents; }
 .flag-tertiary { color: var(--tertiary); }
 .work-body { padding: var(--space-md); display: flex; flex-direction: column; gap: var(--space-sm); flex-grow: 1; }
 .work-meta { display: flex; align-items: center; justify-content: space-between; }
-.work-foot { display: flex; align-items: center; justify-content: flex-end; gap: var(--space-md); margin-top: auto; padding-top: var(--space-xs); border-top: 1px dashed var(--outline-variant); }
+.work-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: var(--space-md); margin-top: auto; padding-top: var(--space-xs); border-top: 1px dashed var(--outline-variant); }
 .work-link { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 600; color: var(--on-surface); transition: color 0.25s ease, gap 0.25s ease; }
 .work-link:hover { color: var(--primary); gap: 8px; }
 .work-metric {
@@ -724,8 +727,10 @@ picture { display: contents; }
 }
 .eco-foot { padding: 0 var(--space-md) var(--space-md); margin-top: auto; }
 .callout-main { display: flex; flex-direction: column; gap: var(--space-sm); align-items: flex-start; min-width: min(560px, 100%); }
-.callout-main .label-caps { color: var(--on-primary); opacity: 0.85; letter-spacing: 0.2em; }
-.callout-copy { color: var(--on-primary); opacity: 0.92; max-width: 640px; }
+.callout-main .label-caps { color: #fff; opacity: 0.85; letter-spacing: 0.2em; }
+.callout-main .headline-lg,
+.callout-copy { color: #fff; }
+.callout-copy { opacity: 0.92; max-width: 640px; }
 .callout {
   margin-top: var(--space-lg); display: flex; flex-wrap: wrap; gap: var(--space-md);
   align-items: center; justify-content: space-between;
@@ -1192,8 +1197,6 @@ body { transition: background-color 0.35s ease, color 0.35s ease; }
   background: linear-gradient(120deg, #1d4ed8, #0f2fa0 55%, #070b19);
   border-color: rgba(29, 78, 216, 0.4);
 }
-[data-theme="light"] .callout-main .label-caps,
-[data-theme="light"] .callout-copy { color: #fff; }
 [data-theme="light"] .btn-onprimary { background: #fff; color: #1d4ed8; }
 
 [data-theme="light"] .btn-outline { border-color: var(--outline-variant); background: rgba(29, 78, 216, 0.04); }
