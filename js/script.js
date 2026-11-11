@@ -104,7 +104,10 @@
   var drawer = $('#mobile-drawer');
   var scrim = $('#drawer-scrim');
   var navToggle = $('#nav-toggle');
-
+  var closeBtn = $('#closeBtn');
+  if (closeBtn) closeBtn.addEventListener('click', function () {
+    setDrawer(false);
+  });
   function setDrawer(open) {
     if (!drawer || !navToggle) return;
     drawer.classList.toggle('open', open);

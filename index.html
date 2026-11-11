@@ -101,7 +101,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=14" />
+  <link rel="stylesheet" href="css/styles.css?v=15" />
 </head>
 <body>
 
@@ -220,6 +220,15 @@
 
   <!-- ============ MOBILE DRAWER ============ -->
   <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" aria-label="Mobile navigation">
+    <div style="display: flex; justify-content: end; " >
+      <button id="closeBtn" style="height: 50px;
+      width:50px;
+    border-radius: 50%;
+    background-color: #1d4ed8;
+    font-weight: 800;
+    color: white;
+    font-size: 23px;" >X</button>
+    </div>
     <nav class="drawer-nav" aria-label="Mobile">
       <a href="#home" class="nav-link active">Home</a>
       <a href="#capabilities" class="nav-link">Capabilities</a>
@@ -270,9 +279,9 @@
             <span class="dot dot-primary"></span>
             <span class="label-caps">Digital products · Design · Technology</span>
           </span>
-          <span class="flow-pill code-badge" aria-hidden="true">
+          <!-- <span class="flow-pill code-badge" aria-hidden="true">
             <b>Strategy</b><i>→</i><span>Design</span><i>→</i><b>Build</b><i>→</i><span>Launch</span><i>→</i><em>Evolve</em>
-          </span>
+          </span> -->
         </div>
 
         <div class="hero-grid">
@@ -307,6 +316,11 @@
           </div>
 
           <aside class="hero-visual reveal" data-d="120" aria-label="The Nloga ecosystem at a glance">
+            
+            <span class="flow-pill code-badge" aria-hidden="true">
+              <b>Strategy</b><i>→</i><span>Design</span><i>→</i><b>Build</b><i>→</i><span>Launch</span><i>→</i><em>Evolve</em>
+            </span>
+            
             <div class="visual-stack glass-panel">
               <div class="spotlight" aria-hidden="true"></div>
               <article class="module-card">
@@ -1002,7 +1016,7 @@
     </section>
 
     <!-- ============ 12. CONTACT ============ -->
-    <section class="section section-deep" id="contact">
+    <section  class="section section-deep" id="contact">
       <svg class="ribbon ribbon-contact" viewBox="0 0 600 200" preserveAspectRatio="none" aria-hidden="true">
         <defs>
           <linearGradient id="rg-contact" x1="0%" y1="100%" x2="100%" y2="0%">
@@ -1014,7 +1028,7 @@
         <path d="M-20,180 C150,160 250,40 420,50 C520,56 560,90 620,70" fill="none" stroke="url(#rg-contact)" stroke-width="2.5" />
         <path d="M-20,200 C160,185 260,80 430,88" fill="none" stroke="url(#rg-contact)" stroke-width="1.5" opacity="0.7" />
       </svg>
-      <div class="container">
+      <div class="container " style="padding: 10px; margin: 0;"  >
         <div class="section-head reveal">
           <div class="section-head-main">
             <span class="eyebrow label-caps">Get in touch</span>
@@ -1022,7 +1036,7 @@
           </div>
           <p class="body-lg lead section-head-aside">Pick the form that fits you — switch anytime with one click.</p>
         </div>
-        <div class="contact-grid">
+        <div class="contact-grid form-section">
           <div class="contact-main reveal">
             <div class="form-switcher" id="form-switcher" role="tablist" aria-label="Choose a form">
               <span class="switcher-indicator" aria-hidden="true"></span>
@@ -1126,7 +1140,7 @@
               </div>
             </div>
           </div>
-          <aside class="contact-aside reveal" data-d="120">
+          <aside class="contact-aside above reveal" data-d="120">
             <div class="contact-card">
               <span class="label-caps">Prefer a direct conversation?</span>
               <div class="contact-lines">
@@ -1450,6 +1464,6 @@
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="js/analytics.js?v=1"></script>
   <script src="js/i18n.js?v=5"></script>
-  <script src="js/script.js?v=7"></script>
+  <script src="js/script.js?v=8"></script>
 </body>
 </html>

@@ -1,11 +1,11 @@
 /* NLOGA — offline-first service worker (cache-first shell, network images). */
-var CACHE = 'nloga-v13';
+var CACHE = 'nloga-v14';
 var SHELL = [
   './',
   'index.html',
-  'css/styles.css?v=14',
+  'css/styles.css?v=15',
   'js/analytics.js?v=1',
-  'js/script.js?v=7',
+  'js/script.js?v=8',
   'js/i18n.js?v=5',
   'manifest.webmanifest',
   'icon-192.png',
